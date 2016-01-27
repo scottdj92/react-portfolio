@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Biography extends React.Component {
+export default class Biography extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -25,5 +25,3 @@ class Biography extends React.Component {
 		);
 	}
 }
-
-export default Biography;

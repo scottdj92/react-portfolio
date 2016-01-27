@@ -1,7 +1,7 @@
 import React from 'react';
 import PortfolioPiece from './portfolio-piece.jsx';
 
-class Portfolio extends React.Component {
+export default class Portfolio extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -34,5 +34,3 @@ class Portfolio extends React.Component {
 		);
 	}
 }
-
-export default Portfolio;

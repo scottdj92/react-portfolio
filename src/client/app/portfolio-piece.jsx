@@ -1,36 +1,31 @@
 import React from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 
-class PortfolioPiece extends React.Component {
+export default class PortfolioPiece extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			showLightbool: "false", 
 			num: 0,
-			flipped: ""
+			flipped: false
 		};
 		this.showLightbox = this.showLightbox.bind(this);
 	}
 
 	showLightbox() {
 		console.log('clicked');
-		if(this.state.showLightbool === "true") {
-			this.setState({showLightbool: "false"});
-			this.setState({flipped: "flipped"});
-		} else {
-			this.setState({showLightbool: "true"});
-		}
+		this.setState({flipped: true});
 
 		/*let newNumCount = this.state.num + 1;
 		this.setState({num: newNumCount});*/
 	}
 
 	render() {
-		return (
-			var flipClass = classNames({
+		let flipClass = cx({
 				'flipping': true,
 				'flipped': this.state.flipped
 			});
+		return (
 			<div className='portfolioPiece' onClick={this.showLightbox}>
 				<h4>portfolio pieces here lololol</h4>
 				<span>{this.state.showLightbool}</span>
@@ -42,5 +37,3 @@ class PortfolioPiece extends React.Component {
 		);
 	}
 }
-
-export default PortfolioPiece;

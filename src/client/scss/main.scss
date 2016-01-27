@@ -41,10 +41,9 @@ html {
 
 		.portfolioPiece {
 			cursor: pointer;
-			width: 200px;
-			height: 260px;
 			position: relative;
 			perspective: 800px;
+			display: inline-block;
 
 			.flipping {
 				width: 100%;
@@ -77,12 +76,20 @@ html {
 			}
 		}
 
+		.email {
+			text-align: center;
+		}
+
 		.footer {
 			text-align: center;
 
-			.githubLink:before {
-				content: '\f09b';
-				font-family: 'FontAwesome';
+			a {
+				text-decoration: none;
+				color: #F5F5F5;
+
+				&:hover {
+					color: #BFBFBF;
+				}
 			}
 
 			.emailLink:before {

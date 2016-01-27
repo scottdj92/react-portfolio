@@ -6,6 +6,7 @@ import '../scss/main.scss';
 import Header from './header.jsx';
 import Biography from './biography.jsx';
 import Portfolio from './portfolio.jsx';
+import Email from './email.jsx';
 import Footer from './footer.jsx';
 
 class App extends React.Component {
@@ -15,6 +16,7 @@ class App extends React.Component {
 				<Header/>
 				<Biography/>
 				<Portfolio/>
+				<Email/>
 				<Footer/>
 			</div>
 		);
