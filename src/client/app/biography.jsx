@@ -10,7 +10,7 @@ export default class Biography extends React.Component {
 			<div>
 				<h1>Bio</h1>
 				<section>Hi, I'm Scott Jones. I hail from Tucson, Arizona.</section>
-				<section>
+				<section className='header'>
 					<h4>Stats:</h4>
 					<ul>
 						<li>Age: 23</li>
@@ -18,7 +18,7 @@ export default class Biography extends React.Component {
 						<li>Skills: Front-end Web Development</li>
 						<li>Spirit Animal: Buffalo</li>
 						<li>Favorite Text Editor: Sublime Text 3</li>
-						<li>Can I do a reverse 360 dunk?: Yes</li>
+						<li>Can I do a reverse 360 dunk?: No</li>
 					</ul>
 				</section>
 			</div>

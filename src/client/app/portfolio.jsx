@@ -4,6 +4,11 @@ import PortfolioPiece from './portfolio-piece.jsx';
 export default class Portfolio extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.props = {
+			test: "test"
+		};
+
 		this.state = {
 			numPieces: 4,
 			pieces: []
@@ -18,12 +23,6 @@ export default class Portfolio extends React.Component {
 			<div>
 				<h1>Portfolio</h1>
 				<section>
-					{/*<ol>
-						{this.state.pieces.map(function(piece){
-							return <li key="piece.id">piece.text</li>
-						})}
-					</ol>*/} 
-
 					<ol>
 						{this.state.pieces.map(function(piece, i){
 							return <div key={i}>{piece}</div>

@@ -7,32 +7,25 @@ export default class PortfolioPiece extends React.Component {
 		this.state = {
 			showLightbool: "false", 
 			num: 0,
-			flipped: false
+			p1: {
+				content: "piece #1 content",
+				link: "link",
+				linkPath: "#",
+				img: "imgPath"
+			}
 		};
-		this.showLightbox = this.showLightbox.bind(this);
-	}
-
-	showLightbox() {
-		console.log('clicked');
-		this.setState({flipped: true});
-
-		/*let newNumCount = this.state.num + 1;
-		this.setState({num: newNumCount});*/
 	}
 
 	render() {
-		let flipClass = cx({
+		let classes = cx({
 				'flipping': true,
 				'flipped': this.state.flipped
 			});
 		return (
 			<div className='portfolioPiece' onClick={this.showLightbox}>
-				<h4>portfolio pieces here lololol</h4>
-				<span>{this.state.showLightbool}</span>
-				<div className={flipClass}>
-					<figure className='front'>1</figure>
-					<figure className='back'>2</figure>
-				</div>
+				<h4>Portfolio Piece Title</h4>
+				<p>{this.state.p1.content}</p>
+				<a href={this.state.p1.linkPath}>{this.state.p1.link}</a>
 			</div>
 		);
 	}
